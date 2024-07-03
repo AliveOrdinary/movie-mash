@@ -39,7 +39,7 @@ const MovieDetails = ({ movieData, onRandomize }) => {
             <div className="relative z-10 min-h-screen flex flex-col p-4 md:p-8">
                 <header className="text-orange-500 font-bold text-xl md:text-2xl mb-4 md:mb-8">Movie Mash</header>
 
-                <div className="flex-grow flex flex-col md:flex-row justify-center items-center max-w-6xl mx-auto">
+                <div className="flex-grow flex flex-col md:flex-row-reverse justify-center items-center max-w-6xl mx-auto">
                     {/* Movie Details */}
                     <div className="md:w-2/3 md:pr-8">
                         <h1 className="text-3xl md:text-5xl font-bold text-white mb-2">
