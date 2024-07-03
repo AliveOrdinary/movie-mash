@@ -8,7 +8,7 @@ const MovieDetails = ({ movieData, onRandomize }) => {
 
     const {
         name,
-        year,
+        datePublished,
         image,
         genre,
         description,
@@ -18,6 +18,9 @@ const MovieDetails = ({ movieData, onRandomize }) => {
         director,
         actor
     } = movieData;
+
+    // Extract year from datePublished
+    const year = datePublished ? new Date(datePublished).getFullYear() : 'Unknown Year';
 
     return (
         <div className="relative min-h-screen w-full bg-gray-900 overflow-hidden">
@@ -43,7 +46,7 @@ const MovieDetails = ({ movieData, onRandomize }) => {
                     {/* Movie Details */}
                     <div className="md:w-2/3 md:pr-8">
                         <h1 className="text-3xl md:text-5xl font-bold text-white mb-2">
-                            {name} <span className="text-xl md:text-3xl font-normal">({year || 'Unknown Year'})</span>
+                            {name} <span className="text-xl md:text-3xl font-normal">({year})</span>
                         </h1>
                         <p className="text-white mb-2 md:mb-4">{genre?.join(', ') || 'Unknown Genre'}</p>
                         <p className="text-white mb-4 md:mb-6 text-sm md:text-base">{description || 'No description available.'}</p>
